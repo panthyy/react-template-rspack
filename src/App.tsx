@@ -1,13 +1,8 @@
-import React from "react";
-import { useState } from "react";
-import "./App.css";
-import { Button } from "./components/Button";
-
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { IndexPage } from "./pages";
-import { NotFoundPage } from "./pages/404";
-
+import { IndexPage, NotFoundPage } from "./pages";
+import { QueryClient, QueryClientProvider } from "react-query";
 import "@fontsource/inter/600.css";
+import "./App.css";
 
 const router = createBrowserRouter([
   {
@@ -24,10 +19,14 @@ const router = createBrowserRouter([
   },
 ]);
 
+const queryClient = new QueryClient();
+
 export default function App() {
   return (
-    <div className="App">
-      <RouterProvider router={router} />
-    </div>
+    <QueryClientProvider client={queryClient}>
+      <div className="App">
+        <RouterProvider router={router} />
+      </div>
+    </QueryClientProvider>
   );
 }

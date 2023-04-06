@@ -1,6 +1,6 @@
 // withLayout util that takes in a layout,children and returns a component
 
-import Layout from "@components/Layout";
+import { Layout } from "@components/index";
 
 export const withLayout = <T extends Record<string, unknown>>(
   Component: React.ComponentType<T>,
