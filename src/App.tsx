@@ -1,5 +1,5 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { IndexPage, NotFoundPage } from "./pages";
+import { AboutPage, IndexPage, NotFoundPage } from "./pages";
 import { QueryClient, QueryClientProvider } from "react-query";
 import "@fontsource/inter/600.css";
 import "./App.css";
@@ -16,6 +16,10 @@ const router = createBrowserRouter([
   {
     path: "/404",
     element: <NotFoundPage />,
+  },
+  {
+    path: "/about",
+    element: <AboutPage />,
   },
 ]);
 

@@ -1,4 +1,5 @@
 import { useQuery } from "react-query";
+import { Link } from "react-router-dom";
 
 export const Pokemons = () => {
   const { isLoading, data, error } = useQuery("pokemons", () =>
