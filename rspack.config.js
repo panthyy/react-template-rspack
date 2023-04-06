@@ -35,6 +35,19 @@ module.exports = {
         type: "asset",
       },
       {
+        test: /\.css$/,
+        use: [
+          {
+            loader: "postcss-loader",
+            options: {
+              postcssOptions: {
+                plugins: ["tailwindcss"],
+              },
+            },
+          },
+        ],
+      },
+      {
         test: /\.tsx?$/,
         use: {
           loader: "swc-loader",
