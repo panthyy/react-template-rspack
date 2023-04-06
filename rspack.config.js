@@ -17,6 +17,16 @@ module.exports = {
         template: "./index.html",
       },
     ],
+    minifyOptions: {
+      dropConsole: true,
+      passes: 2,
+    },
+  },
+  optimization: {
+    splitChunks: {
+      chunks: "all",
+      minSize: 70 * 1024,
+    },
   },
   module: {
     rules: [
@@ -34,6 +44,11 @@ module.exports = {
                 react: {
                   runtime: "automatic",
                 },
+              },
+              paths: {
+                "@components/*": ["./src/components/*"],
+                "@hooks/*": ["./src/hooks/*"],
+                "@utils/*": ["./src/utils/*"],
               },
               parser: {
                 syntax: "typescript",

@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "target": "es2016",
+    "baseUrl": "src",
     "module": "ES6",
     "esModuleInterop": true,
     "moduleResolution": "node",
@@ -9,9 +10,9 @@
     "skipLibCheck": true,
     "jsx": "react-jsx",
     "paths": {
-      "@components/*": ["./src/components/*"],
-      "@hooks/*": ["./src/hooks/*"],
-      "@utils/*": ["./src/utils/*"]
+      "@components/*": ["components/*"],
+      "@hooks/*": ["hooks/*"],
+      "@utils/*": ["utils/*"]
     }
   },
 

@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "rspack serve",
-    "build": "rm -rf dist && rspack build"
+    "build": "rm -rf dist && rspack build --mode production"
   },
   "dependencies": {
     "@fontsource/inter": "^4.5.15",
